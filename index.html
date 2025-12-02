@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="O Ritual Matinal de 7 Segundos que ativa o metabolismo.">
+  <title>Protocolo Laranja • Método Oficial</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+            }
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 3s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-5px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos Customizados */
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .shadow-soft {
+      box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+    }
+
+    /* Classe para esconder elementos com delay (Botão de compra) */
+    .hidden-delay {
+      display: none;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Botão Pulsante Laranja */
+    .btn-pulse {
+      animation: pulseOrange 2s infinite;
+    }
+
+    @keyframes pulseOrange {
+      0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+    }
+
+    /* Barra Sticky Mobile */
+    .sticky-cta-bar {
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .sticky-cta-bar.show {
+      transform: translateY(0);
+    }
+
+    /* Accordion */
+    .accordion-content {
+      transition: all 0.3s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+    .accordion-item.active .accordion-content {
+      max-height: 500px; /* valor alto seguro */
+      opacity: 1;
+      padding-bottom: 1rem;
+    }
+    .accordion-item.active .icon-plus {
+      transform: rotate(45deg);
+    }
+
+    /* Checkbox Customizado para o Upsell */
+    .checkbox-bump:checked + div {
+      background-color: #fff7ed;
+      border-color: #f97316;
+    }
+    .checkbox-bump:checked + div .check-icon {
+      background-color: #f97316;
+      border-color: #f97316;
+    }
+    .checkbox-bump:checked + div .check-icon svg {
+      opacity: 1;
+    }
+
+    /* Notificação Toast (Baloesinhos) */
+    .toast-notification {
+      transform: translateX(-150%);
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .toast-notification.show {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 relative overflow-x-hidden">
+
+  <!-- BARRA DE URGÊNCIA -->
+  <div class="bg-red-600 text-white text-[10px] sm:text-xs font-medium text-center py-2 px-4 shadow-sm relative z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-center gap-2">
+      <span class="animate-pulse">🔴</span>
+      <span><strong>URGENTE:</strong> Devido à alta demanda viral no TikTok, as vagas com desconto podem encerrar hoje.</span>
+    </div>
+  </div>
+
+  <!-- HEADER "Clean Medical" -->
+  <header class="bg-white border-b border-slate-100 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-brand-500/30">
+          P
+        </div>
+        <span class="font-display font-bold text-lg tracking-tight text-slate-900">
+          Protocolo<span class="text-brand-500">Laranja</span>
+        </span>
+      </div>
+      
+      <!-- Selos de Confiança Header (Desktop) -->
+      <div class="hidden md:flex items-center gap-4 text-xs font-medium text-slate-500">
+        <div class="flex items-center gap-1 bg-slate-50 px-3 py-1.5 rounded-full border border-slate-100">
+          <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span>Cientificamente Comprovado</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          <span>Site Seguro</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION / VSL -->
+    <section class="pt-8 pb-12 sm:pt-12 sm:pb-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        
+        <!-- Headline -->
+        <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 text-brand-700 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wide mb-6">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+          </span>
+          Nova descoberta de Stanford 2024
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] mb-6 tracking-tight">
+          O Ritual Matinal de <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-600 underline decoration-brand-200/50 decoration-4 underline-offset-4">7 Segundos</span> que Derrete Gordura Profunda
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+          Sem dietas restritivas, sem academia e sem passar fome. Veja como ativar suas <strong>Células de Gordura Marrom</strong> naturalmente.
+        </p>
+
+        <!-- Video Container -->
+        <div class="relative w-full max-w-3xl mx-auto bg-slate-900 rounded-2xl shadow-2xl shadow-brand-500/10 overflow-hidden aspect-video border-4 border-white mb-8 group cursor-pointer">
+          <!-- Placeholder de Imagem do Vídeo (VSL) -->
+          <div id="video-placeholder" class="absolute inset-0 bg-slate-100 flex items-center justify-center relative">
+             <img src="https://placehold.co/800x450/1e293b/FFF?text=VIDEO+SALES+LETTER+(VSL)" alt="VSL Cover" class="w-full h-full object-cover opacity-90">
+             
+             <!-- Play Button Overlay -->
+             <div class="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-all">
+                <div class="w-20 h-20 bg-brand-500 rounded-full flex items-center justify-center shadow-lg shadow-brand-500/40 animate-pulse-slow">
+                   <svg class="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+             </div>
+             
+             <div class="absolute bottom-4 left-0 right-0 text-center px-4">
+               <p class="text-white text-xs sm:text-sm font-medium drop-shadow-md">🔊 Verifique se o som está ligado</p>
+             </div>
+          </div>
+        </div>
+
+        <!-- Delay Button Container -->
+        <div id="cta-container" class="hidden-delay max-w-md mx-auto fade-in">
+          <a href="#oferta" class="btn-pulse flex flex-col items-center justify-center w-full bg-brand-600 hover:bg-brand-700 text-white font-display font-bold text-lg sm:text-xl py-4 px-8 rounded-xl shadow-xl shadow-brand-500/20 transition-all transform hover:-translate-y-1">
+            <span>QUERO ATIVAR MEU METABOLISMO</span>
+            <span class="text-xs font-medium text-brand-100 mt-1 opacity-90">Desconto de 80% liberado hoje</span>
+          </a>
+          
+          <div class="flex items-center justify-center gap-4 mt-4 text-[10px] sm:text-xs text-slate-500">
+            <span class="flex items-center gap-1"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Compra Segura</span>
+            <span class="flex items-center gap-1"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 10.3c.62-2.25 2.15-4.22 4.22-5.46.2-.12.44-.12.64 0l1.17.7c.2.12.2.38.02.56L6.5 7.8c-.1.1-.12.24-.06.36.3.6.72 1.14 1.24 1.58.12.1.14.28.04.4l-1.17 1.4c-.1.12-.28.14-.4.04-1.9-1.55-3.1-3.72-3.48-6.14-.04-.24-.26-.4-.5-.34l-1.8.4c-.24.06-.4.28-.34.52.44 2.8 2.06 5.28 4.48 6.94.12.08.28.06.38-.04l1.17-1.4c.1-.12.08-.3-.04-.4-.52-.44-.94-.98-1.24-1.58-.06-.12-.04-.26.06-.36l1.72-1.7c.18-.18.18-.44-.02-.56l-1.17-.7c-.2-.12-.44-.12-.64 0-2.07 1.24-3.6 3.2-4.22 5.46-.06.24.1.48.34.52l1.8-.4c.24-.06.4-.26.34-.5zM12 2a1 1 0 011 1v14a1 1 0 01-2 0V3a1 1 0 011-1zm5.293 4.293a1 1 0 011.414 0l2 2a1 1 0 01-1.414 1.414L18 8.414V17a1 1 0 01-2 0V8.414l-1.293 1.293a1 1 0 01-1.414-1.414l2-2z" clip-rule="evenodd"/></svg> Garantia de 30 Dias</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: A CIÊNCIA (CLEAN) -->
+    <section class="py-16 bg-slate-50 border-y border-slate-100">
+      <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand-600 font-bold text-xs uppercase tracking-wider mb-2 block">Causa Raiz Descoberta</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
+            Por que dietas e exercícios falharam com você?
+          </h2>
+          <p class="text-slate-600 mb-4 leading-relaxed">
+            Não é sua culpa. Um estudo de 2024 publicado na <em class="text-slate-800 font-serif">Nature Medicine</em> com 52.000 mulheres descobriu um fator comum em todas as pessoas com sobrepeso: <strong>Baixos níveis de Tecido Adiposo Marrom (BAT).</strong>
+          </p>
+          <p class="text-slate-600 mb-6 leading-relaxed">
+            A Gordura Marrom não é gordura. É um <strong>encolhedor de gordura</strong>. Sua cor marrom vem das mitocôndrias densas que trabalham 24/7 para queimar calorias em energia pura.
+          </p>
+          
+          <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-100 flex items-start gap-4">
+            <div class="text-3xl">💡</div>
+            <div>
+              <p class="text-sm text-slate-700"><strong>O Segredo:</strong> Mesmo um pequeno aumento nos níveis de gordura marrom pode aumentar a queima calórica diária em até 300%.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <!-- Visualização Científica Simplificada -->
+          <div class="bg-white rounded-2xl p-6 shadow-soft border border-slate-100 text-center">
+            <div class="flex justify-center items-center gap-6 mb-4">
+              <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-yellow-100 rounded-full border-2 border-yellow-200 flex items-center justify-center mb-2">
+                  <div class="w-16 h-16 bg-yellow-200 rounded-full blur-sm opacity-50"></div>
+                </div>
+                <span class="text-xs font-bold text-slate-500 uppercase">Gordura<br>Branca</span>
+                <span class="text-[10px] text-red-500 font-medium">(Armazena)</span>
+              </div>
+              
+              <div class="text-slate-300">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <div class="w-20 h-20 bg-brand-100 rounded-full border-2 border-brand-500 flex items-center justify-center mb-2 relative overflow-hidden shadow-lg shadow-brand-500/20">
+                   <div class="absolute inset-0 bg-gradient-to-tr from-brand-600 to-orange-400 opacity-90"></div>
+                   <span class="relative text-white font-bold text-xs">🔥</span>
+                </div>
+                <span class="text-xs font-bold text-brand-600 uppercase">Gordura<br>Marrom</span>
+                <span class="text-[10px] text-emerald-600 font-medium">(Queima)</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-500 bg-slate-50 p-2 rounded-lg">
+              O Protocolo Laranja foi desenhado para transformar seu corpo em uma máquina de queima de gordura ao ativar o BAT.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL / ESTILO REDE SOCIAL -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900">Resultados Reais de Mulheres Reais</h2>
+          <p class="text-slate-500 mt-2">Junte-se a mais de 4.300 mulheres que recuperaram a autoestima.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-sm">MC</div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">Maria Clara</p>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+              <span class="ml-auto text-[10px] text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full border border-emerald-100">Verificada</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              "Eu achava que meu metabolismo tinha parado depois dos 45. Em 3 semanas de Protocolo Laranja, minhas roupas já estão largas. Aquele inchaço na barriga sumiu!"
+            </p>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex justify-between text-xs font-medium">
+              <span class="text-brand-600">-8kg eliminados</span>
+              <span class="text-slate-400">Há 2 dias</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">AL</div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">Ana Luiza</p>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+              <span class="ml-auto text-[10px] text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full border border-emerald-100">Verificada</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              "O melhor é não precisar fazer aquelas dietas malucas. O suco matinal e os 7 segundos viraram minha rotina sagrada. Me sinto com 20 anos de novo."
+            </p>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex justify-between text-xs font-medium">
+              <span class="text-brand-600">-12cm de cintura</span>
+              <span class="text-slate-400">Há 5 dias</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center font-bold text-sm">FE</div>
+              <div>
+                <p class="text-sm font-bold text-slate-900">Fernanda E.</p>
+                <div class="flex text-yellow-400 text-xs">★★★★★</div>
+              </div>
+              <span class="ml-auto text-[10px] text-emerald-600 bg-emerald-50 px-2 py-1 rounded-full border border-emerald-100">Verificada</span>
+            </div>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              "Comprei com medo, mas a garantia me deixou segura. Não precisei usar. É impressionante como funciona rápido quando a gente ativa a gordura certa."
+            </p>
+            <div class="mt-4 pt-4 border-t border-slate-200/60 flex justify-between text-xs font-medium">
+              <span class="text-brand-600">-6kg eliminados</span>
+              <span class="text-slate-400">Há 1 semana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA PRINCIPAL COM ORDER BUMP (UPSELL) -->
+    <section id="oferta" class="py-16 bg-gradient-to-b from-white to-brand-50">
+      <div class="max-w-4xl mx-auto px-4">
+        
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-200 relative">
+            <!-- Faixa Topo -->
+            <div class="bg-slate-900 text-white text-center py-3">
+                <p class="text-xs sm:text-sm font-medium uppercase tracking-wider">⚡ Oferta Exclusiva para Novos Alunos</p>
+            </div>
+
+            <div class="p-6 sm:p-10 grid md:grid-cols-2 gap-10 relative">
+                <!-- Coluna Info -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-display text-2xl font-bold text-slate-900">Protocolo Laranja <span class="text-brand-500">Completo</span></h3>
+                        <p class="text-sm text-slate-500 mt-2">Acesso vitalício ao método + 3 Bônus Premium.</p>
+                    </div>
+
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm text-slate-700">
+                            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                            Guia de Ativação Matinal (PDF)
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700">
+                            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                            Cardápios Metabólicos
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700">
+                            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                            <strong>Bônus 1:</strong> Sucos Detox Anti-Inchaço
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-700">
+                            <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs">✓</div>
+                            <strong>Bônus 2:</strong> Grupo VIP de Suporte
+                        </li>
+                    </ul>
+
+                    <!-- Order Bump / Upsell Area -->
+                    <div class="mt-6 border-2 border-dashed border-brand-200 rounded-xl p-1 bg-brand-50/50">
+                        <label class="cursor-pointer relative block">
+                            <input type="checkbox" id="upsell-check" class="checkbox-bump peer sr-only">
+                            <div class="p-4 rounded-lg transition-all border border-transparent hover:border-brand-200 flex gap-3 items-start">
+                                <div class="check-icon w-6 h-6 rounded border-2 border-slate-300 bg-white flex items-center justify-center flex-shrink-0 transition-colors mt-0.5">
+                                    <svg class="w-4 h-4 text-white opacity-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-900 leading-tight">SIM! Quero acelerar 3x mais</p>
+                                    <p class="text-xs text-slate-600 mt-1">Adicione o <strong>Manual "Barriga Chapada em 7 Dias"</strong> por apenas <span class="text-brand-600 font-bold">+ R$ 29,90</span>.</p>
+                                    <p class="text-[10px] text-red-500 mt-1 font-medium italic">Oferta única. Não disponível depois.</p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <!-- Coluna Preço -->
+                <div class="flex flex-col justify-center bg-brand-50/50 rounded-2xl p-6 border border-brand-100 text-center relative overflow-hidden">
+                    <!-- Faixa de Desconto -->
+                    <div class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg">
+                        HOJE: -80% OFF
+                    </div>
+
+                    <p class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2">Preço Regular: <span class="line-through decoration-red-400">R$ 197,00</span></p>
+                    
+                    <div class="mb-4">
+                        <p class="text-slate-600 text-sm font-medium">Hoje por apenas:</p>
+                        <div class="flex items-end justify-center gap-1 text-slate-900 leading-none mt-2 transition-all duration-300" id="price-container">
+                            <span class="text-2xl font-bold pb-2">12x de</span>
+                            <!-- ID para manipulação via JS -->
+                            <span id="display-installments" class="text-5xl sm:text-6xl font-extrabold text-brand-600 tracking-tighter">9,74</span>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-2">ou R$ <span id="display-total">97,00</span> à vista</p>
+                    </div>
+
+                    <a href="#" onclick="alert('Redirecionando para checkout com a oferta selecionada!')" class="btn-pulse w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-green-600/20 text-lg uppercase transition-colors relative overflow-hidden group">
+                        <span class="relative z-10">Sim, Quero Emagrecer!</span>
+                        <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                    </a>
+                    
+                    <div class="mt-4 flex justify-center gap-2 opacity-60 grayscale hover:grayscale-0 transition-all">
+                       <!-- Ícones de Cartão SVG Simplificados -->
+                       <div class="h-6 w-10 bg-slate-200 rounded"></div>
+                       <div class="h-6 w-10 bg-slate-200 rounded"></div>
+                       <div class="h-6 w-10 bg-slate-200 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ CLEAN -->
+    <section class="py-16 bg-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="font-display text-2xl font-bold text-slate-900 text-center mb-8">Perguntas Frequentes</h2>
+
+        <div class="space-y-4">
+          <!-- Item 1 -->
+          <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+            <button class="accordion-header w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left font-medium text-slate-800">
+              <span>O que é exatamente o Protocolo Laranja?</span>
+              <span class="icon-plus text-brand-500 font-bold text-xl transition-transform">+</span>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <p class="text-sm text-slate-600 py-4">É um programa 100% digital focado em reativar o Tecido Adiposo Marrom (BAT) através de um ritual matinal específico de 7 segundos, permitindo que seu corpo queime gordura como energia de forma natural.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+            <button class="accordion-header w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left font-medium text-slate-800">
+              <span>Funciona para quem tem mais de 40 anos?</span>
+              <span class="icon-plus text-brand-500 font-bold text-xl transition-transform">+</span>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <p class="text-sm text-slate-600 py-4">Sim! O método foi desenvolvido pensando justamente no metabolismo lento, comum após os 30 ou 40 anos. As técnicas não exigem esforço físico intenso.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="accordion-item border border-slate-200 rounded-lg overflow-hidden">
+            <button class="accordion-header w-full flex items-center justify-between p-4 bg-slate-50 hover:bg-slate-100 transition-colors text-left font-medium text-slate-800">
+              <span>Como recebo o acesso?</span>
+              <span class="icon-plus text-brand-500 font-bold text-xl transition-transform">+</span>
+            </button>
+            <div class="accordion-content bg-white px-4">
+              <p class="text-sm text-slate-600 py-4">Imediatamente após a confirmação do pagamento, você receberá um e-mail com seu login e senha para nossa área de membros exclusiva.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center text-xs border-t border-slate-800 pb-24 md:pb-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-wrap justify-center gap-6 mb-6">
+        <a href="#" class="hover:text-white">Termos de Uso</a>
+        <a href="#" class="hover:text-white">Política de Privacidade</a>
+        <a href="#" class="hover:text-white">Contato</a>
+      </div>
+      <p class="mb-4">
+        &copy; 2024 Protocolo Laranja. Todos os direitos reservados.
+      </p>
+      <p class="max-w-2xl mx-auto text-[10px] text-slate-600">
+        Este site não é afiliado ao Facebook ou Google. Os resultados podem variar de pessoa para pessoa. Consulte seu médico antes de iniciar qualquer programa de exercícios ou nutrição.
+      </p>
+    </div>
+  </footer>
+
+  <!-- NOTIFICAÇÕES (BALOESINHOS) DE PROVA SOCIAL -->
+  <div id="social-toast" class="toast-notification fixed bottom-20 md:bottom-4 left-4 z-50 bg-white rounded-lg shadow-xl border border-slate-100 p-3 flex items-center gap-3 max-w-[280px] sm:max-w-xs">
+      <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
+             <!-- Placeholder Avatar -->
+             <svg class="w-full h-full text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          </div>
+          <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+      </div>
+      <div>
+          <p class="text-xs font-bold text-slate-900" id="toast-name">Mariana S.</p>
+          <p class="text-[10px] text-slate-500" id="toast-action">Entrou no desafio há 5 min</p>
+          <p class="text-[10px] text-brand-600 font-medium flex items-center gap-1">
+             <span class="w-1 h-1 rounded-full bg-brand-500"></span> Verificado
+          </p>
+      </div>
+      <!-- Botão fechar -->
+      <button onclick="document.getElementById('social-toast').classList.remove('show')" class="absolute top-1 right-1 text-slate-300 hover:text-slate-500">
+         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+  </div>
+
+  <!-- STICKY CTA MOBILE -->
+  <div id="sticky-cta" class="sticky-cta-bar fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-3 z-50 shadow-[0_-5px_20px_rgba(0,0,0,0.1)] md:hidden">
+    <a href="#oferta" class="flex items-center justify-center w-full bg-brand-600 text-white font-bold py-3 rounded-lg text-sm shadow-lg shadow-brand-500/30 uppercase tracking-wide">
+      Quero Acesso com Desconto
+    </a>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      // 1. Lógica do Upsell / Order Bump (Atualização de Preço)
+      const checkboxBump = document.getElementById('upsell-check');
+      const displayInstallments = document.getElementById('display-installments');
+      const displayTotal = document.getElementById('display-total');
+      
+      // Valores
+      const basePrice = 97.00;
+      const baseInstallment = 9.74;
+      
+      const bumpPrice = 29.90;
+      const bumpInstallment = 3.00; // Aproximado
+
+      checkboxBump.addEventListener('change', function() {
+        if(this.checked) {
+            // Animação simples de troca
+            animateValue(displayInstallments, baseInstallment, (baseInstallment + bumpInstallment).toFixed(2));
+            displayTotal.innerText = (basePrice + bumpPrice).toFixed(2).replace('.', ',');
+        } else {
+            animateValue(displayInstallments, (baseInstallment + bumpInstallment), baseInstallment.toFixed(2));
+            displayTotal.innerText = basePrice.toFixed(2).replace('.', ',');
+        }
+      });
+
+      function animateValue(obj, start, end) {
+        // Efeito visual de mudança rápida
+        obj.style.opacity = '0.5';
+        setTimeout(() => {
+            obj.innerText = end.toString().replace('.', ',');
+            obj.style.opacity = '1';
+        }, 150);
+      }
+
+
+      // 2. Lógica de Prova Social (Baloesinhos)
+      const names = [
+        { name: 'Juliana M.', city: 'São Paulo, SP', action: 'Acabou de comprar' },
+        { name: 'Carla Dias', city: 'Rio de Janeiro, RJ', action: 'Entrou no desafio' },
+        { name: 'Patrícia S.', city: 'Belo Horizonte, MG', action: 'Comprou o Protocolo' },
+        { name: 'Amanda L.', city: 'Curitiba, PR', action: 'Entrou no desafio' },
+        { name: 'Beatriz F.', city: 'Salvador, BA', action: 'Garantiu sua vaga' }
+      ];
+
+      const toast = document.getElementById('social-toast');
+      const toastName = document.getElementById('toast-name');
+      const toastAction = document.getElementById('toast-action');
+
+      function showToast() {
+        // Escolhe random
+        const randomPerson = names[Math.floor(Math.random() * names.length)];
+        const timeAgo = Math.floor(Math.random() * 10) + 1; // 1 a 10 min
+
+        toastName.innerText = randomPerson.name;
+        toastAction.innerText = `${randomPerson.action} há ${timeAgo} min de ${randomPerson.city}`;
+        
+        toast.classList.add('show');
+
+        // Esconde depois de 4 segundos
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 5000);
+      }
+
+      // Inicia ciclo de notificações
+      // Primeira aparição em 5 seg, depois a cada 15 seg
+      setTimeout(() => {
+          showToast();
+          setInterval(showToast, 15000);
+      }, 5000);
+
+
+      // 3. Lógica do Accordion (FAQ)
+      const accordions = document.querySelectorAll('.accordion-header');
+      accordions.forEach(acc => {
+        acc.addEventListener('click', function() {
+          const item = this.parentElement;
+          document.querySelectorAll('.accordion-item').forEach(i => {
+            if(i !== item) i.classList.remove('active');
+          });
+          item.classList.toggle('active');
+        });
+      });
+
+      // 4. Lógica do Delay (VSL)
+      const SECONDS_TO_SHOW = 5; // Ajuste para o tempo do vídeo (ex: 1200 para 20min)
+      
+      setTimeout(() => {
+        const hiddenElements = document.querySelectorAll('.hidden-delay');
+        hiddenElements.forEach(el => {
+          el.style.display = 'block'; 
+        });
+        showStickyCTA();
+      }, SECONDS_TO_SHOW * 1000);
+
+      // 5. Scroll Listener
+      function showStickyCTA() {
+        window.addEventListener('scroll', () => {
+          const stickyBar = document.getElementById('sticky-cta');
+          const offerSection = document.getElementById('oferta');
+          
+          if (!stickyBar || !offerSection) return;
+
+          const offerPosition = offerSection.getBoundingClientRect().top;
+          
+          if (window.scrollY > 400) {
+            stickyBar.classList.add('show');
+          } else {
+            stickyBar.classList.remove('show');
+          }
+
+          if(offerPosition < window.innerHeight && offerPosition > -offerSection.offsetHeight) {
+             stickyBar.classList.remove('show');
+          }
+        });
+      }
+
+      // Smooth Scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+    });
+  </script>
+</body>
+</html>
