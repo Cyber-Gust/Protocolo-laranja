@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Receitas Fit & Rápidas | Método Vital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { light: '#34d399', DEFAULT: '#059669', dark: '#064e3b' }, // Emerald
+                        action: { DEFAULT: '#f97316', hover: '#ea580c' } // Orange
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(5, 150, 105, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .book-mockup {
+            transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+            transition: transform 0.5s ease;
+        }
+        .book-mockup:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.05);
+        }
+        .check-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #059669; /* Brand Color */
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <div class="bg-gray-900 text-white text-center py-2 text-xs md:text-sm font-semibold tracking-wider">
+        🔥 OFERTA POR TEMPO LIMITADO: DE <span class="line-through text-gray-500">R$ 67,90</span> POR APENAS R$ 29,90
+    </div>
+
+    <header class="bg-white border-b border-gray-100 py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+                <span href="/index.html" class="text-xl font-bold tracking-tight text-gray-900">MÉTODO <a class="text-brand">VITAL</a></a>
+            </div>
+            <a href="#oferta" class="bg-brand text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-brand-dark transition shadow-lg shadow-brand/30">
+                GARANTIR DESCONTO
+            </a>
+        </div>
+    </header>
+
+    <section class="relative pt-12 pb-20 overflow-hidden bg-white">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-light/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-orange-100/50 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="text-center lg:text-left space-y-6">
+                <div class="inline-flex items-center gap-2 bg-green-50 border border-green-100 px-3 py-1 rounded-full text-brand text-xs font-bold uppercase tracking-wide">
+                    <i class="fa-solid fa-clock"></i> Prontas em menos de 15 minutos
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black leading-tight text-gray-900">
+                    Coma o que <span class="text-brand">você ama</span> e continue emagrecendo.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 font-light max-w-lg mx-auto lg:mx-0">
+                    Chega de frango seco e salada sem gosto. Descubra 100 receitas deliciosas, práticas e baratas para destravar seu metabolismo.
+                </p>
+                
+                <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#oferta" class="bg-action hover:bg-action-hover text-white text-xl px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-orange-200 transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                        QUERO BAIXAR AGORA <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <p class="text-xs text-gray-400 uppercase font-semibold tracking-wide">
+                    <i class="fa-solid fa-lock text-brand"></i> Compra 100% Segura • Acesso Imediato
+                </p>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-md lg:max-w-full flex justify-center">
+                <div class="book-mockup relative w-[300px] h-[450px] bg-gray-900 rounded-r-2xl rounded-l-md shadow-2xl border-l-4 border-gray-800 flex flex-col overflow-hidden group cursor-pointer">
+                    <img src="/imgs/Capa para Ebook Receitas Saudáveis Para Diabéticos Moderno Verde.png" alt="Capa Ebook" class="absolute inset-0 w-full h-full object-cover opacity-90">
+                    <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
+                        <p class="text-sm font-light text-brand-light">Edição Digital</p>
+                        <h3 class="text-2xl font-bold">100 Receitas Fit & Rápidas</h3>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-action text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        BEST-SELLER
+                    </div>
+                </div>
+                
+                <div class="absolute -bottom-6 -right-6 md:right-10 bg-white p-4 rounded-xl shadow-lg border border-gray-100 flex items-center gap-3 animate-bounce duration-[3000ms]">
+                    <div class="bg-green-100 p-2 rounded-full text-brand">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold uppercase">Calorias</p>
+                        <p class="font-bold text-gray-900 text-sm">Baixas & Nutritivas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Por que é tão difícil manter a dieta?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl mb-4">🤢</div>
+                    <h3 class="font-bold text-lg mb-2">Comida Sem Graça</h3>
+                    <p class="text-gray-500 text-sm">Ninguém aguenta comer a mesma coisa todos os dias. O paladar pede variedade.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl mb-4">⏱️</div>
+                    <h3 class="font-bold text-lg mb-2">Falta de Tempo</h3>
+                    <p class="text-gray-500 text-sm">Cozinhar comidas complexas demora horas. Você precisa de praticidade.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition">
+                    <div class="text-4xl mb-4">💸</div>
+                    <h3 class="font-bold text-lg mb-2">Ingredientes Caros</h3>
+                    <p class="text-gray-500 text-sm">Dietas de nutricionista muitas vezes pedem ingredientes que custam uma fortuna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-brand font-bold tracking-wider uppercase text-sm">O que você vai encontrar</span>
+                <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-2">Delícias para o dia todo</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Café" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-xl">Café da Manhã</h3>
+                            <p class="text-gray-300 text-sm">Panquecas, Shakes e Ovos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer mt-0 md:mt-8">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Almoço" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-xl">Almoço Rápido</h3>
+                            <p class="text-gray-300 text-sm">Pratos completos em 15 min</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jantar" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-xl">Jantar Leve</h3>
+                            <p class="text-gray-300 text-sm">Low carb para dormir bem</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl cursor-pointer mt-0 md:mt-8">
+                    <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Doces" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-white font-bold text-xl">Doces Fit</h3>
+                            <p class="text-gray-300 text-sm">Mate a vontade sem culpa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-green-50 rounded-2xl p-8 md:p-12 border border-green-100">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Mais do que apenas receitas...</h3>
+                        <ul class="space-y-4 check-list text-gray-700">
+                            <li><strong>Contagem de Calorias e Macros:</strong> Saiba exatamente o que você está comendo em cada prato.</li>
+                            <li><strong>Ingredientes Acessíveis:</strong> Tudo o que você encontra no mercado da esquina. Nada de "Farinha de Amêndoas do Himalaia".</li>
+                            <li><strong>Passo a passo simples:</strong> Até quem não sabe fritar um ovo consegue fazer.</li>
+                            <li><strong>Opções para Marmitas:</strong> Receitas que podem ser congeladas para a semana toda.</li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <img src="/imgs/Brown White Modern Recipe Card.png" alt="Preview Interno" class="rounded-lg shadow-lg rotate-2 hover:rotate-0 transition duration-500 mx-auto bg-white p-2 border border-gray-200">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Leve Grátis esses 3 Bônus Exclusivos</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand transition group">
+                    <div class="text-brand text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-cart-shopping"></i></div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Lista de Compras Inteligente</h3>
+                    <p class="text-gray-400 text-sm mb-4">Uma checklist para você levar no mercado e economizar até 30% nas compras da dieta.</p>
+                    <span class="text-xs bg-red-500 px-2 py-1 rounded text-white font-bold">Vendido por R$ 29,90</span>
+                </div>
+                
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand transition group">
+                    <div class="text-brand text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-wine-glass"></i></div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Guia de Sucos Detox</h3>
+                    <p class="text-gray-400 text-sm mb-4">10 receitas de sucos potentes para desinchar rápido após um final de semana de exageros.</p>
+                    <span class="text-xs bg-red-500 px-2 py-1 rounded text-white font-bold">Vendido por R$ 37,00</span>
+                </div>
+
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand transition group">
+                    <div class="text-brand text-3xl mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-calendar-days"></i></div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Planner de Refeições</h3>
+                    <p class="text-gray-400 text-sm mb-4">Template pronto para imprimir e colar na geladeira com seu cardápio da semana.</p>
+                    <span class="text-xs bg-red-500 px-2 py-1 rounded text-white font-bold">Vendido por R$ 19,90</span>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-xl font-bold">Total em Bônus: <span class="line-through text-gray-500">R$ 86,80</span> <span class="text-brand">GRÁTIS HOJE</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gradient-to-b from-white to-green-50" id="oferta">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border-2 border-brand overflow-hidden">
+                <div class="bg-brand p-4 text-center text-white">
+                    <p class="font-bold tracking-widest uppercase text-sm">Oferta Especial de Lançamento</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100 flex flex-col justify-center">
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span>📚 Ebook 100 Receitas Fit</span>
+                                <span class="line-through">R$ 67,90</span>
+                            </div>
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span>🛒 Lista de Compras</span>
+                                <span class="line-through text-red-400">R$ 29,90</span>
+                            </div>
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span>🍹 Guia Detox</span>
+                                <span class="line-through text-red-400">R$ 37,00</span>
+                            </div>
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span>📅 Planner Semanal</span>
+                                <span class="line-through text-red-400">R$ 19,90</span>
+                            </div>
+                            <hr class="border-dashed border-gray-300">
+                            <div class="flex items-center justify-between font-bold text-gray-900 text-lg">
+                                <span>Valor Total</span>
+                                <span class="line-through">R$ 154,70</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 md:p-12 bg-gray-50 flex flex-col justify-center text-center">
+                        <p class="text-gray-500 font-semibold mb-2">Leve tudo isso hoje por apenas:</p>
+                        <div class="flex items-center justify-center gap-2 mb-2">
+                            <span class="text-2xl text-gray-400 font-bold">R$</span>
+                            <span class="text-6xl font-black text-brand tracking-tighter">29,90</span>
+                        </div>
+                        <p class="text-sm text-green-600 font-bold bg-green-100 inline-block mx-auto px-3 py-1 rounded-full mb-6">ou 3x de R$ 10,65</p>
+                        
+                        <a href="#" class="w-full bg-action hover:bg-action-hover text-white text-xl py-4 rounded-xl font-bold shadow-lg transition transform hover:-translate-y-1 mb-4 flex flex-col leading-tight">
+                            <span>COMPRAR AGORA</span>
+                            <span class="text-xs font-normal opacity-90">Acesso enviado no seu e-mail</span>
+                        </a>
+                        
+                        <img src="https://placehold.co/300x50/e5e7eb/a3a3a3?text=Selos+Cartoes+Seguranca" alt="Bandeiras Cartão" class="mx-auto h-6 opacity-60">
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto mt-12 flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                <div class="w-24 h-24 flex-shrink-0">
+                    <img src="https://cdn-icons-png.flaticon.com/512/9512/9512530.png" alt="Garantia 7 dias" class="w-full h-full object-contain opacity-80">
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-bold text-lg text-gray-900">Garantia Incondicional de 7 Dias</h3>
+                    <p class="text-gray-600 text-sm mt-1">Se você não gostar das receitas ou achar que não é para você, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-2xl font-bold text-center mb-8">Dúvidas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden faq-item cursor-pointer">
+                    <div class="bg-gray-50 p-4 flex justify-between items-center faq-question hover:bg-gray-100 transition">
+                        <span class="font-bold text-gray-700">Sou iniciante na cozinha, vou conseguir fazer?</span>
+                        <i class="fa-solid fa-chevron-down text-brand"></i>
+                    </div>
+                    <div class="p-4 bg-white text-gray-600 text-sm hidden faq-answer border-t border-gray-100">
+                        Com certeza! As receitas foram pensadas para quem não tem experiência. O passo a passo é extremamente simples e direto.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden faq-item cursor-pointer">
+                    <div class="bg-gray-50 p-4 flex justify-between items-center faq-question hover:bg-gray-100 transition">
+                        <span class="font-bold text-gray-700">Como recebo o ebook?</span>
+                        <i class="fa-solid fa-chevron-down text-brand"></i>
+                    </div>
+                    <div class="p-4 bg-white text-gray-600 text-sm hidden faq-answer border-t border-gray-100">
+                        É um produto 100% digital. Assim que o pagamento for confirmado, você receberá um e-mail com o link para baixar o PDF e os bônus no seu celular, tablet ou computador.
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg overflow-hidden faq-item cursor-pointer">
+                    <div class="bg-gray-50 p-4 flex justify-between items-center faq-question hover:bg-gray-100 transition">
+                        <span class="font-bold text-gray-700">Serve para vegetarianos?</span>
+                        <i class="fa-solid fa-chevron-down text-brand"></i>
+                    </div>
+                    <div class="p-4 bg-white text-gray-600 text-sm hidden faq-answer border-t border-gray-100">
+                        Cerca de 40% das receitas são vegetarianas, mas o foco principal são proteínas magras variadas (frango, peixe, carne, ovos).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <p class="mb-2">&copy; 2024 Método Vital. Todos os direitos reservados.</p>
+            <p class="text-xs text-gray-600 max-w-2xl mx-auto">Este produto não substitui o parecer médico profissional. Sempre consulte um médico para tratar de assuntos relativos à saúde.</p>
+            <div class="mt-4 flex justify-center gap-4 text-xs">
+                <a href="#" class="hover:text-white">Termos de Uso</a>
+                <a href="#" class="hover:text-white">Política de Privacidade</a>
+                <a href="#" class="hover:text-white">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('i');
+
+                question.addEventListener('click', () => {
+                    // Fecha outros (opcional)
+                    faqItems.forEach(other => {
+                        if(other !== item) {
+                            other.querySelector('.faq-answer').classList.add('hidden');
+                            other.querySelector('i').classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Alterna atual
+                    answer.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                    icon.style.transition = 'transform 0.3s';
+                });
+            });
+
+            // Smooth Scroll (já é nativo do HTML, mas garante compatibilidade)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
